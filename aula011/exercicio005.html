@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confira seu paìs</title>
+    <style>
+        body{
+            background-color: rgb(46, 126, 126);
+            color: white;
+            font: normal 18pt Arial;
+        }
+        input{
+            font: normal 18pt Arial;
+        }
+
+        button{
+            font: normal 18pt Arial;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Confira seu paìs</h1>
+    <p>Diga onde vc mora</p>
+    <input type="text" name="n1" id="n1">
+    <button id="clicar" onclick="calcular()" >Verificar</button>
+    <div id="res" >Resultado</div>
+
+    <script>
+        var clic = document.getElementById('clicar')
+        clic.addEventListener('click', clicar)
+        function clicar(){
+            var n1 = document.getElementById('n1')
+            var res = document.getElementById('res')
+            var txtn1 = (n1.value)
+            if (txtn1 == 'Brasil'){
+                res.innerText = 'Você é Brasileiro'
+            }
+            else{
+                res.innerText = 'Você é estrangeiro' 
+            }
+        }   
+
+    </script>
+
+</body>
+</html>

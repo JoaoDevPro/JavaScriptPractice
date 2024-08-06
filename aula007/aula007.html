@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+        background-color: rgb(169, 120, 224);
+        color: white;
+        font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Primeiros passos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript </p>
+    <div id="msg" >Clique em mim</div>
+
+
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        //window.document.write('Está escrito assim ' + p1.innerText)
+        //corpo.style.background = 'black'
+        //window.alert(p1.innerHTML) innerHTML ele já pega o texto com a formatação 
+        var d = window.document.getElementById('msg')
+        //var d = window.document.querySelector('div#msg') usando seletor (#id) (.class)
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando..'
+
+    </script>
+</body>
+</html>
